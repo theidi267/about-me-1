@@ -1,31 +1,48 @@
-'use strict' //code checker, links to ".eslintrc.json" in webpage emigen folder
+'use strict'
+document.getElementById('pic2').onclick=function(){
 
-///
-var petQuestion = parseInt(prompt('How many pets do you think I have? please enter a number'));
+var questionOne = prompt('Would you guess that I\'m from Seattle?');
+    if(questionOne.toLowerCase() === 'yes'){
+        alert('That\'s right!');
+        console.log('+1 correct answer') 
+    } else {
+        alert('Ah you think rain is your ally? You merely adopted the rain. I was born in it, molded by it.');
+        console.log('+0 correct answer') 
+    };
+   
+var questionTwo = prompt('Am I older than 30?');
+    if(questionTwo.toLowerCase() === 'yes'){
+        alert('wrong..');
+        console.log('+0 correct answer') 
+    } else {
+        alert('That\s right! I\'m 28 until March 15');
+        console.log('+1 correct answer') 
+    };
 
-if(petQuestion === 2 ) {
-    alert('correct');
+var questionThree = prompt('Would you say I\'m white?');
+    if(questionThree.toLowerCase() === 'yes'){
+        alert('Nah, just a programmer');
+        console.log('+0 correct answer') 
+    } else {
+        alert('That\'s right, I\'m just a programmer.');
+        console.log('+1 correct answer') 
+    };
 
-}
-else{
-    alert('nope');
-}
+var questionFour = prompt('Are all my tattoos red?');
+    if(questionFour.toLowerCase() === 'yes'){
+        alert('ding ding ding!');
+        console.log('+1 correct answer') 
+    } else {
+        alert('BZZZZZZZ');
+        console.log('+0 correct answer') 
+    };
 
-///
-var myAge = prompt('Do you think I\'m older than 30? Please enter yes or no')
-
-if(myAge.toLowerCase() ==='yes'){
-    alert('That is correct')
-}
-else{'No, I am older than 30!'}
-
-
-// if(first condition);{
-//     do this;
-// }
-// else if(second contition){
-//     do this;
-// }
-// else{
-//     do this;
-// }
+var questionFive = prompt('want to be friends?');
+    if(questionFive.toLowerCase() === 'yes'){
+        alert('Hit me up on Slack!');
+        console.log('+1 correct answer') 
+    } else {
+        alert('Psht. Whatever.');
+        console.log('+0 correct answer') 
+    };    
+};
