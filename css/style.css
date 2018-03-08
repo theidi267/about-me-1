@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(219, 207, 207)
+    background-color: rgb(151, 78, 78)
 }
 
 #pic2 {
@@ -12,12 +12,14 @@ body {
 
 h1 {
     text-align: center;
-    color: rgb(65, 78, 199);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(179, 193, 231);
     font-size: 50px
+
 }
 
 h3 {
     text-align: center;
-    color: rgb(122, 131, 218);
+    color: rgb(228, 155, 155);
     font-size: 20px
 }

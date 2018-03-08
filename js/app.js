@@ -6,8 +6,9 @@ var counter = 0
 var userName = prompt("Hey! I\'m Jason. I made this page about myself. Who are you?");
 alert('Nice to meet you ' + userName + '. ');
 
-alert('');
-
+alert('Ok, so I\'ve made a yes or no guessing game out of these prompts and alerts, cool right?');
+alert('If you get a question right, you get a point. If you get it wrong, ya don\'t! yes or no:');
+//Question 1
 var questionOne = prompt('Would you guess that I\'m from Seattle?');
     if(questionOne.toLowerCase() === 'yes'){
         alert('It\'s true, I am.');
@@ -17,7 +18,8 @@ var questionOne = prompt('Would you guess that I\'m from Seattle?');
         alert('I am, actually. As a Seattlite I was born in the rain, molded by it.');
         console.log('+0'); 
     };
-   
+
+//Question 2
 var questionTwo = prompt('Would you guess that I\'m 28?');
     if(questionTwo.toLowerCase() === 'yes'){
         alert('Yes? You would be right!');
@@ -29,6 +31,7 @@ var questionTwo = prompt('Would you guess that I\'m 28?');
         
     };
 
+//Question 3
 var questionThree = prompt('Am I programmer?');
     if(questionThree.toLowerCase() === 'yes'){
         alert('Yes It\'s true! I programmed this!');
@@ -39,9 +42,10 @@ var questionThree = prompt('Am I programmer?');
         console.log('+0');
     };
 
+//Question 4
 var questionFour = prompt('Would you suppose I\'m dog friendly?');
     if(questionFour.toLowerCase() === 'yes'){
-        alert('it\'s true I love dogs. More than people sometimes. Usually.');
+        alert('It\'s true I love dogs. More than people sometimes. Usually.');
         console.log('+1');
         counter++; 
     } else {
@@ -49,9 +53,10 @@ var questionFour = prompt('Would you suppose I\'m dog friendly?');
         console.log('+0'); 
     };
 
+//Question 5
 var questionFive = prompt('Wanna be friends?');
     if(questionFive.toLowerCase() === 'yes'){
-        alert('Hit me up on Slack!');
+        alert('You should hit me up on Slack');
         console.log('+1');
         counter++; 
     } else {
@@ -59,5 +64,26 @@ var questionFive = prompt('Wanna be friends?');
         console.log('+0'); 
     };    
 
-    console.log('correct answers: ' + counter + '/5');
+//Question 6
+for(var sixLoop = 0; sixLoop < 4; sixLoop++) {
+
+var questionSix = parseInt(prompt('You get four guesses, what is my favorite number? HINT: it\'s three digits.'));
+    if(questionSix > 315){
+        alert('Lower, guess again.');
+        
+    } else if (questionSix < 315){
+        alert('Higher, guess again.');
+       
+    } else {
+        alert('Wow, you guessed it. The ides of March!')
+        counter++;
+        break;
+    };
+}
+
+
+    alert('Thanks for playing! ' + userName + ' you got ' + counter + '/6 correct!');
+    console.log('correct answers: ' + counter + '/6');
+
+
 // };
