@@ -79,7 +79,37 @@ var questionSix = parseInt(prompt('You get four guesses, what is my favorite num
         counter++;
         break;
     };
-}
+};
+//Question 7
+var counterState = 0;
+var correct = false;
+var myStates = ['washington', 'florida', 'south Carolina', 'alaska'];
+
+while (correct === false && counter < 6){
+    var theirGuess = (prompt('Can you guess a state that I have lived in besides Washington?')).toLowerCase();
+    for (var i = 0; i < myStates.length; i++) {
+        if (myStates[i] === theirGuess) {
+            console.log(i);
+            alert('Nice Guess!');
+            counterState++;
+            console.log(counterState + ' tries to answer');
+            correct=true;
+            counter++;
+            break;
+          }
+          else {
+            console.log(counterState + 'Nope! Guess again.');
+            counterState++;
+          }
+    } //for close
+} //while close
+
+if(correct === false ) {
+    alert('none guessed properly');
+       }
+        
+    
+
 
 
     alert('Thanks for playing! ' + userName + ' you got ' + counter + '/6 correct!');
