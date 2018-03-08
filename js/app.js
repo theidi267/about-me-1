@@ -85,27 +85,26 @@ var counterState = 0;
 var correct = false;
 var myStates = ['washington', 'florida', 'south Carolina', 'alaska'];
 
-while (correct === false && counter < 6){
+while (correct === false && counterState < 6){
     var theirGuess = (prompt('Can you guess a state that I have lived in besides Washington?')).toLowerCase();
     for (var i = 0; i < myStates.length; i++) {
         if (myStates[i] === theirGuess) {
             console.log(i);
             alert('Nice Guess!');
-            counterState++;
-            console.log(counterState + ' tries to answer');
+            console.log(counterState + ' attempts made');
             correct=true;
             counter++;
             break;
           }
           else {
-            console.log(counterState + 'Nope! Guess again.');
+            console.log(counterState + 'attempts made');
             counterState++;
           }
     } //for close
 } //while close
 
 if(correct === false ) {
-    alert('none guessed properly');
+    alert('Florida would have been a good guess, but there\'s no place like home.');
        }
         
     
