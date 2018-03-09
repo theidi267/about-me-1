@@ -145,7 +145,7 @@ questionFive();
 
 //Question 6
 
-
+function questionSix(){
         
     for(var sixLoop = 0; sixLoop < 4; sixLoop++) {
 
@@ -165,7 +165,7 @@ questionFive();
     };
 };
 
-
+questionSix();
 
 //Question 7
 var counterState = 1;
