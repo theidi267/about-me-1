@@ -72,44 +72,56 @@ function questionTwo(){
         };
 };
 
-questionTwo()
-
+questionTwo();
 
 //Question 3
-var questionThree = prompt('Am I programmer?');
 
-    while (questionThree.length <1){
-        alert('you did not answer');
-        questionThree = prompt('Am I programmer?');
-    };
+function questionThree(){
+        
+    var questionThree = prompt('Am I programmer?');
 
-    if(questionThree.toLowerCase() === 'yes'){
-        alert('Yes It\'s true! I programmed this!');
-        console.log('+1'); 
-        counter++;
-    } else {
-        alert('Wrong, how do you think THIS page got here?! HA');
-        console.log('+0');
-    };
+        while (questionThree.length <1){
+            alert('you did not answer');
+            questionThree = prompt('Am I programmer?');
+        };
+
+        if(questionThree.toLowerCase() === 'yes'){
+            alert('Yes It\'s true! I programmed this!');
+            console.log('+1'); 
+            counter++;
+        } else {
+            alert('Wrong, how do you think THIS page got here?! HA');
+            console.log('+0');
+        };
+};
+
+questionThree();
 
 //Question 4
-var questionFour = prompt('Would you suppose I\'m dog friendly?');
 
-    while (questionFour.length <1){
-        alert('you did not answer');
-        questionFour = prompt('Would you suppose I\'m dog friendly?');
-    };
+function questionFour(){
+        
+    var questionFour = prompt('Would you suppose I\'m dog friendly?');
 
-    if(questionFour.toLowerCase() === 'yes'){
-        alert('It\'s true I love dogs. More than people sometimes. Usually.');
-        console.log('+1');
-        counter++; 
-    } else {
-        alert('No way, I love doggos.');
-        console.log('+0'); 
-    };
+        while (questionFour.length <1){
+            alert('you did not answer');
+            questionFour = prompt('Would you suppose I\'m dog friendly?');
+        };
+
+        if(questionFour.toLowerCase() === 'yes'){
+            alert('It\'s true I love dogs. More than people sometimes. Usually.');
+            console.log('+1');
+            counter++; 
+        } else {
+            alert('No way, I love doggos.');
+            console.log('+0'); 
+        };
+};
+
+questionFour();
 
 //Question 5
+
 var questionFive = prompt('Wanna be friends?');
 
     while (questionFive.length <1){
@@ -145,28 +157,29 @@ var questionSix = parseInt(prompt('You get four guesses, what is my favorite num
 };
 
 //Question 7
-var counterState = 0;
+var counterState = 1;
 var correct = false;
 var myStates = ['washington', 'florida', 'south Carolina', 'alaska'];
 
 //TODO counterState < 24 yeilds 6 guesses. why? magic.. [ the loop in loop has something to do with this? ]
-while (correct === false && counterState < 24){
+while (correct === false && counterState < 7){
     var theirGuess = (prompt('Can you guess a state that I have lived in besides Washington?')).toLowerCase();
     for (var i = 0; i < myStates.length; i++) {
         if (myStates[i] === theirGuess && theirGuess !=null) { //Attention to this null, working?
-            console.log(i);
+            console.log('theirGuess maches array position ' + i);
             alert('Nice Guess!');
             console.log(counterState + ' attempts made');
             correct=true;
             counter++;
             break;
-          }
-          else {
-            console.log(counterState + 'attempts made');
-            counterState++;
-          }
-    } //for close
-} //while close
+          };
+
+    }; //for close
+
+    console.log(counterState + 'attempts made');
+    counterState++;
+
+}; //while close
 
 if(correct === false ) {
     alert('Florida would have been a good guess, but there\'s no place like home.');
