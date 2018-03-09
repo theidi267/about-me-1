@@ -21,21 +21,28 @@ function introduction(){
 introduction();
 
 //Question 1
-var questionOne = prompt('Would you guess that I\'m from Seattle?');
 
-    while (questionOne.length <1){
-        alert('you did not answer');
-        questionOne = prompt('Would you guess that I\'m from Seattle?');
-    };
+function questionOne(){
+        
+    var questionOne = prompt('Would you guess that I\'m from Seattle?');
 
-    if(questionOne.toLowerCase() === 'yes'){
-        alert('It\'s true, I am.');
-        console.log('+1');
-        counter++;
-    } else {
-        alert('I am, actually. As a Seattlite I was born in the rain, molded by it.');
-        console.log('+0'); 
-    };
+        while (questionOne.length <1){
+            alert('you did not answer');
+            questionOne = prompt('Would you guess that I\'m from Seattle?');
+        };
+
+        if(questionOne.toLowerCase() === 'yes'){
+            alert('It\'s true, I am.');
+            console.log('+1');
+            counter++;
+        } else {
+            alert('I am, actually. As a Seattlite I was born in the rain, molded by it.');
+            console.log('+0'); 
+        };
+};
+
+questionOne();
+
 
 //Question 2
 var questionTwo = prompt('Would you guess that I\'m 28?');
