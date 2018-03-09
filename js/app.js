@@ -15,7 +15,9 @@ function introduction(){
 
     alert('If you get a question right, you get a point. If you get it wrong, ya don\'t! yes or no:');
 
-    window.userName = userName
+    window.userName = userName;
+
+    console.log('userName ' + userName);
 };
 
 introduction();
@@ -43,29 +45,35 @@ function questionOne(){
 
 questionOne();
 
-
 //Question 2
-var questionTwo = prompt('Would you guess that I\'m 28?');
 
-    while (questionTwo.length <1){
-        alert('you did not answer');
-        questionTwo = prompt('Would you guess that I\'m 28?');
-    };
-
-    while (questionTwo.length <1){
-    alert('you did not answer');
-    ageGuess = prompt ('question about age');
-    };
-    
-    if(questionTwo.toLowerCase() === 'yes'){
-        alert('Yes? You would be right!');
-        console.log('+1');
-        counter++;
-    } else {
-        alert('I am 28 years old, it\'s true. Getting old now. Sigh.');
-        console.log('+0');
+function questionTwo(){
         
-    };
+    var questionTwo = prompt('Would you guess that I\'m 28?');
+
+        while (questionTwo.length <1){
+            alert('you did not answer');
+            questionTwo = prompt('Would you guess that I\'m 28?');
+        };
+
+        while (questionTwo.length <1){
+        alert('you did not answer');
+        ageGuess = prompt ('question about age');
+        };
+        
+        if(questionTwo.toLowerCase() === 'yes'){
+            alert('Yes? You would be right!');
+            console.log('+1');
+            counter++;
+        } else {
+            alert('I am 28 years old, it\'s true. Getting old now. Sigh.');
+            console.log('+0');
+            
+        };
+};
+
+questionTwo()
+
 
 //Question 3
 var questionThree = prompt('Am I programmer?');
