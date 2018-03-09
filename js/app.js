@@ -157,11 +157,18 @@ function questionSix(){
         } else if (questionSix < 315){
             alert('Higher, guess again.');
         
-        } else {
-            alert('Wow, you guessed it. The ides of March!')
+        } else if(questionSix === 315){
+            alert('Wow, you guessed it. The ides of March!');
             counter++;
+            console.log('+1');
             break;
+        } else {
+            alert('Are you even trying?');
         };
+    };
+
+    if(sixLoop === 4){
+        console.log('+0');
     };
 };
 
@@ -176,33 +183,39 @@ function questionSeven(){
     var myStates = ['washington', 'florida', 'south Carolina', 'alaska'];
 
     //TODO counterState < 24 yeilds 6 guesses. why? magic.. [ the loop in loop has something to do with this? ]
-    while (correct === false && counterState < 7){
+    while (correct === false && counterState < 7) {
         var theirGuess = (prompt('Can you guess a state that I have lived in besides Washington?')).toLowerCase();
         for (var i = 0; i < myStates.length; i++) {
             if (myStates[i] === theirGuess && theirGuess !=null) { //Attention to this null, working?
                 console.log('theirGuess maches array position ' + i);
                 alert('Nice Guess!');
-                console.log(counterState + ' attempts made');
+                console.log(counterState + ' attempts made for question 7.');
                 correct=true;
                 counter++;
+                console.log('+1');
                 break;
             };
 
         }; //for close
 
-        console.log(counterState + ' attempts made');
+        console.log(counterState + ' attempts made for question 7');
         counterState++;
-
+        
     }; //while close
 
     if(correct === false ) {
         alert('Florida would have been a good guess, but there\'s no place like home.');
-        };
+        console.log('+0');
+    };    
 };
 
 questionSeven();
+  
+function quizExit(){
         
-alert('Thanks for playing! ' + window.userName + ' you got ' + counter + '/7 correct!');
-console.log('correct answers: ' + counter + '/7');
+    alert('Thanks for playing! ' + window.userName + ' you got ' + counter + '/7 correct!');
 
-// };
+    console.log('correct answers: ' + counter + '/7');
+};
+
+quizExit();
