@@ -122,39 +122,50 @@ questionFour();
 
 //Question 5
 
-var questionFive = prompt('Wanna be friends?');
+function questionFive(){
 
-    while (questionFive.length <1){
-        alert('you did not answer');
-        questionFive = prompt('Wanna be friends?');
-    };
+    var questionFive = prompt('Wanna be friends?');
 
-    if(questionFive.toLowerCase() === 'yes'){
-        alert('You should hit me up on Slack');
-        console.log('+1');
-        counter++; 
-    } else {
-        alert('Ok, see you around :)');
-        console.log('+0'); 
-    };    
+        while (questionFive.length <1){
+            alert('you did not answer');
+            questionFive = prompt('Wanna be friends?');
+        };
+
+        if(questionFive.toLowerCase() === 'yes'){
+            alert('You should hit me up on Slack');
+            console.log('+1');
+            counter++; 
+        } else {
+            alert('Ok, see you around :)');
+            console.log('+0'); 
+        };    
+};
+
+questionFive();
 
 //Question 6
-for(var sixLoop = 0; sixLoop < 4; sixLoop++) {
 
-var questionSix = parseInt(prompt('You get four guesses, what is my favorite number? HINT: it\'s three digits.'));
-    
-    if(questionSix > 315){
-        alert('Lower, guess again.');
+
         
-    } else if (questionSix < 315){
-        alert('Higher, guess again.');
-       
-    } else {
-        alert('Wow, you guessed it. The ides of March!')
-        counter++;
-        break;
+    for(var sixLoop = 0; sixLoop < 4; sixLoop++) {
+
+    var questionSix = parseInt(prompt('You get four guesses, what is my favorite number? HINT: it\'s three digits.'));
+        
+        if(questionSix > 315){
+            alert('Lower, guess again.');
+            
+        } else if (questionSix < 315){
+            alert('Higher, guess again.');
+        
+        } else {
+            alert('Wow, you guessed it. The ides of March!')
+            counter++;
+            break;
+        };
     };
 };
+
+
 
 //Question 7
 var counterState = 1;
