@@ -4,10 +4,21 @@
 var counter = 0
 
 //introduction
-var userName = prompt("Hey! I\'m Jason. I made this page about myself. Who are you?");
-alert('Nice to meet you ' + userName + '. ');
-alert('Ok, so I\'ve made a yes or no guessing game out of these prompts and alerts, cool right?');
-alert('If you get a question right, you get a point. If you get it wrong, ya don\'t! yes or no:');
+
+function introduction(){
+
+    var userName = prompt("Hey! I\'m Jason. I made this page about myself. Who are you?");
+
+    alert('Nice to meet you ' + userName + '. ');
+
+    alert('Ok, so I\'ve made a yes or no guessing game out of these prompts and alerts, cool right?');
+
+    alert('If you get a question right, you get a point. If you get it wrong, ya don\'t! yes or no:');
+
+    window.userName = userName
+};
+
+introduction();
 
 //Question 1
 var questionOne = prompt('Would you guess that I\'m from Seattle?');
@@ -146,7 +157,7 @@ if(correct === false ) {
     alert('Florida would have been a good guess, but there\'s no place like home.');
        }
         
-    alert('Thanks for playing! ' + userName + ' you got ' + counter + '/7 correct!');
+    alert('Thanks for playing! ' + window.userName + ' you got ' + counter + '/7 correct!');
     console.log('correct answers: ' + counter + '/7');
 
 // };
